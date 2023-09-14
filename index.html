@@ -158,8 +158,9 @@
         alert("Please select a difficulty level.");
         return;
       }
-      let randomOwlPosition = getRandomPosition(gridSize.rows, gridSize.cols);
-      owlPosition = randomOwlPosition;
+     //  generate owl random  Position
+      owlPosition = getRandomPosition(gridSize.rows, gridSize.cols);
+
       // Hide the difficulty selection and show the game
       $("#chooselevel").hide();
       makeGrid(gridSize.rows, gridSize.cols);
@@ -250,7 +251,7 @@
         $("#message").addClass("alert alert-success");
         $("#message").show();
         $(`#${theguess}`).html(
-          "<img src='images/owl.png' alt='Owl' style='width:2em;'>"
+          "<img src='images/owl.png' alt='Owl' style='width:3em;'>"
         );
       } else {
         // Incorrect guess, decrease the score
