@@ -226,6 +226,15 @@
       let theguess = $("#guess").val();
       theguess = theguess.trim().toUpperCase();
 
+      // Check if the guess is in the correct format (e.g., A1, B2)
+  const validGuessPattern = /^[A-Z]\d+$/;
+  if (!validGuessPattern.test(theguess)) {
+    $("#message").html("Invalid Input. Please enter a valid guess.");
+    $("#message").addClass("alert alert-danger");
+    $("#message").show();
+    return;
+  }
+
       if (theguess === "") {
         $("#message").html("Bad Input. Try again.");
         $("#message").addClass("alert alert-info");
