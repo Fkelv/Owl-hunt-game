@@ -136,7 +136,7 @@
     let gameid = "";
     let blnGameOver = false;
     let gridSize; // Store the grid size based on difficulty
-    let owlPosition = { row: 0, col: 0 }; // Store the position of the owl
+    let owlPosition ; // Store the position of the owl
 
     // Function to generate random position within the grid
     function getRandomPosition(rowCount, colCount) {
@@ -149,9 +149,9 @@
     let startGame = function () {
       // Determine the grid size based on the selected button
       if (this.id === "btnEasy") {
-        gridSize = { rows: 3, cols: 3 };
+        gridSize = { rows: 2, cols: 2 };
       } else if (this.id === "btnMedium") {
-        gridSize = { rows: 4, cols: 4 };
+        gridSize = { rows: 3, cols: 3 };
       } else if (this.id === "btnHard") {
         gridSize = { rows: 5, cols: 5 };
       } else {
